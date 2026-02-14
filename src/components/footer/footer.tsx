@@ -1,25 +1,20 @@
 import { FooterBlur } from "@/components/footer/footer-blur";
-import { XIcon, LinkedInIcon, GithubIcon } from "@/components/footer/icons";
+import { XIcon, GithubIcon } from "@/components/footer/icons";
 import Link from "next/link";
 
 const links = [
   {
-    title: "Acme",
+    title: "Routine 25",
     links: [
       {
         label: "Download App",
-        href: "https://apps.apple.com/",
-        title: "Download the app from the App Store",
+        href: "#",
+        title: "Coming soon",
       },
       {
         label: "Features",
         href: "/#features",
         title: "See our features",
-      },
-      {
-        label: "Pricing",
-        href: "/pricing",
-        title: "View pricing",
       },
     ],
   },
@@ -27,14 +22,9 @@ const links = [
     title: "Products",
     links: [
       {
-        label: "For Android",
-        href: "https://play.google.com/store",
-        title: "Download on Android",
-      },
-      {
         label: "For iPhone",
-        href: "https://apps.apple.com/",
-        title: "Download on iOS",
+        href: "#",
+        title: "Coming soon",
       },
     ],
   },
@@ -43,18 +33,15 @@ const links = [
     links: [
       {
         label: "Terms & Conditions",
-        href: "/terms-and-conditions",
-        title: "Read our Terms & Conditions",
+        href: "#",
+        title: "Coming soon",
+        disabled: true,
       },
       {
         label: "Privacy Policy",
-        href: "/privacy-policy",
-        title: "Read our Privacy Policy",
-      },
-      {
-        label: "Refund Policy",
-        href: "/refund-policy",
-        title: "Read our Refund Policy",
+        href: "#",
+        title: "Coming soon",
+        disabled: true,
       },
     ],
   },
@@ -68,18 +55,8 @@ const links = [
             <span>Twitter</span>
           </div>
         ),
-        href: "https://x.com/",
+        href: "https://x.com/routine25app",
         title: "Follow us on Twitter",
-      },
-      {
-        label: (
-          <div className="flex items-center gap-2">
-            <LinkedInIcon className="h-4 w-4" />
-            <span>LinkedIn</span>
-          </div>
-        ),
-        href: "https://www.linkedin.com/",
-        title: "Connect with us on LinkedIn",
       },
       {
         label: (
@@ -88,7 +65,7 @@ const links = [
             <span>Github</span>
           </div>
         ),
-        href: "https://github.com/",
+        href: "https://github.com/jasonellington/r25-app",
         title: "View our GitHub repository",
       },
     ],
@@ -104,15 +81,19 @@ export function Footer() {
           <div key={link.title} className="mb-10 text-center">
             <h3 className="text-muted-foreground mb-8">{link.title}</h3>
             <ul className="flex flex-col items-center gap-8">
-              {link.links.map((link, index) => (
+              {link.links.map((item, index) => (
                 <li key={index}>
-                  <Link
-                    href={link.href}
-                    title={link.title}
-                    target={link.href.startsWith("https://") ? "_blank" : undefined}
-                  >
-                    {link.label}
-                  </Link>
+                  {item.disabled ? (
+                    <span className="text-muted-foreground/50 cursor-default">{item.label}</span>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      title={item.title}
+                      target={item.href.startsWith("https://") ? "_blank" : undefined}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

@@ -1,20 +1,7 @@
 import { MobileNav } from "@/components/hero/mobile-nav";
 import { DesktopNav } from "@/components/hero/desktop-nav";
 
-const navItems = [
-  {
-    label: "Features",
-    href: "/#features",
-  },
-  {
-    label: "Pricing",
-    href: "/pricing",
-  },
-  {
-    label: "Legal",
-    href: "/terms-and-conditions",
-  },
-];
+const navItems: { label: string; href: string }[] = [];
 
 export function Nav() {
   return (

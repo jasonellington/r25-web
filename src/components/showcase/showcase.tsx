@@ -13,18 +13,18 @@ export function Showcase() {
           <Star />
           <HalfStar />
         </div>
-        <p className="text-xl font-bold md:mt-1.5 md:text-3xl">4.9</p>
+        <p className="text-xl font-bold md:mt-1.5 md:text-3xl">4.6</p>
       </Wreath>
       <Wreath>
         <p className="text-[0.625rem] md:text-base">Loved By</p>
-        <p className="mt-1.5 text-center text-xs font-bold md:text-2xl">60 million people</p>
+        <p className="mt-1.5 text-center text-xs font-bold md:text-2xl">Anyone who downloads it</p>
       </Wreath>
       <Wreath>
-        <p className="text-[0.625rem] md:text-base">Download By</p>
+        <p className="text-[0.625rem] md:text-base">Downloaded By</p>
         <p className="mt-1.5 text-center text-xs font-bold text-balance md:text-2xl">
-          100+
+          4 to 6
           <br />
-          million
+          people
         </p>
       </Wreath>
     </div>
