@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest an idea.
+title: "[Feature]: "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Tell us about your feature request
+      description: Describe what you'd like to see added or improved.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you looking to solve?
+      description: Tell us how and why implementing your suggestion would help.
+    validations:
+      required: true
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional context
+      description: Add any other context, screenshots, or illustrations about your suggestion here.
